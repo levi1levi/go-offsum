@@ -1,4 +1,4 @@
-package offsum
+package offpage
 
 import (
 	"github.com/gojek/heimdall/v7/httpclient"

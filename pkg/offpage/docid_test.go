@@ -1,4 +1,4 @@
-package offsum
+package offpage
 
 import (
 	"fmt"

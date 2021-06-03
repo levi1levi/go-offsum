@@ -1,4 +1,4 @@
-package offsum
+package offpage
 
 import (
 	"fmt"
@@ -16,8 +16,16 @@ func TestQuery(t *testing.T) {
 	offsumClient := NewOffsumClient(conf)
 	page := offsumClient.Query("http://www.zhihu.com/")
 
+	fmt.Println("Url:", page.Url)
+	fmt.Println("Header:")
+	for k, v := range page.Header {
+		fmt.Println(k, ":", v)
+	}
+
 	for k, v := range page.Datas {
-		fmt.Println("pages:", k)
+		fmt.Println("page:", k)
+		fmt.Println("CompressedSize:", v.CompressedSize)
+		fmt.Println("OriginalSize:", v.OriginalSize)
 		fmt.Println(v.Data)
 	}
 }

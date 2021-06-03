@@ -1,4 +1,4 @@
-package offsum
+package offpage
 
 import (
 	"github.com/cfhamlet/os-go-docid/docid"
