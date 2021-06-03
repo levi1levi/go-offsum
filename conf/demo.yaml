@@ -1,0 +1,3 @@
+offsum:
+  baseUrl: "http://proxy.offsum.sogou:8412/10000/web/"
+  timeout: 1000
