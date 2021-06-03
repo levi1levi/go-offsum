@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-var rootLoggerName string = "go-offpage"
+var rootLoggerName string = "go-offsum"
 
 // Logger TODO
 var Logger *logging.Logger = logging.MustGetLogger(rootLoggerName)

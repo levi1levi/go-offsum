@@ -1,4 +1,4 @@
-package offpage
+package offsum
 
 import (
 	"bufio"
@@ -83,12 +83,12 @@ func ReadPage(r io.Reader) *OffPage {
 	for {
 		line, err := reader.ReadSlice('\n')
 		if err != nil || io.EOF == err {
-			log.Logger.Info("read offpage error:", err)
+			log.Logger.Info("read offsum error:", err)
 			break
 		}
 		if SimpleCheckUrl(line) {
 			page.Url = string(bytes.TrimSpace(line))
-			log.Logger.Info("read offpage url success")
+			log.Logger.Info("read offsum url success")
 			continue
 		}
 		index := bytes.IndexByte(line, ':')
@@ -102,11 +102,11 @@ func ReadPage(r io.Reader) *OffPage {
 			}
 		}
 		if line[0] == '\n' {
-			log.Logger.Info("read offpage header finished")
+			log.Logger.Info("read offsum header finished")
 			break
 		}
 	}
-	log.Logger.Info("start read offpage body")
+	log.Logger.Info("start read offsum body")
 	contentMap := page.Header["Content-Type"].(map[string]string)
 	// xmlpage
 	xmlpageSize, _ := strconv.Atoi(contentMap["xmlpage"])
@@ -142,6 +142,6 @@ func ReadPage(r io.Reader) *OffPage {
 	renderPage.Data = string(renderpageData)
 	page.Datas["renderpage"] = renderPage
 
-	log.Logger.Info("read offpage success")
+	log.Logger.Info("read offsum success")
 	return page
 }
