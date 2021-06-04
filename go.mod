@@ -1,4 +1,4 @@
-module go-offsum
+module github.com/levi1levi/go-offsum
 
 go 1.16
 
