@@ -8,7 +8,7 @@ import (
 
 func TestQuery(t *testing.T) {
 	conf := viper.New()
-	conf.SetConfigFile("../../conf/demo.yaml")
+	conf.SetConfigFile("../conf/demo.yaml")
 	err := conf.ReadInConfig()
 	if err != nil { // Handle errors reading the config file
 		panic(fmt.Errorf("Fatal error config file: %s \n", err))

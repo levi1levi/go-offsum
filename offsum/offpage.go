@@ -4,7 +4,7 @@ import (
 	"bufio"
 	"bytes"
 	"compress/zlib"
-	"github.com/levi1levi/go-offsum/pkg/log"
+	"github.com/levi1levi/go-offsum/log"
 	"golang.org/x/text/encoding/unicode"
 	"io"
 	"io/ioutil"
